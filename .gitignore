@@ -1,0 +1,30 @@
+#node
+node_modules
+
+# Javascript generated from TypeScript for content scripts
+content/**/*.js
+content/**/*.js.map
+
+# Javascript generated from TypeScript for popup screen
+popup/*.js
+popup/*.js.map
+
+# Visual Studio working files
+.vs
+
+# distribution directory
+dist
+
+# cache
+.cache
+.parcel-cache
+
+#jest code coverage and reporting output
+coverage
+/junit.xml
+
+# any yarn errors
+/yarn-error.log
+
+# map file output when in dev mode
+/dev/

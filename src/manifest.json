@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Basic - Popup Page Starter Template",
+  "description": "Starter template for a basic popup page extension.",
+  "version": "1.0.0",
+  "icons": {
+    "128": "assets/icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "js": [
+        "content/content.ts"
+      ],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "32": "assets/icons/icon.png"
+    },
+    "default_popup": "popup/index.html",
+    "default_title": "Open Popup"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+O",
+        "mac": "MacCtrl+Shift+O"
+      },
+      "description": "Toggle Popup"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background/background.ts"
+    ],
+    "persistent": false
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  }
+}
